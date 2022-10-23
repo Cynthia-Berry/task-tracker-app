@@ -3,15 +3,11 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Header = () => {
 	return (
-		<Navbar>
+		<Navbar bg="light" variant="light">
 			<Container>
 				<Navbar.Brand href="#home">Task Tracker</Navbar.Brand>
 				<Navbar.Toggle/>
-				{/*<Navbar.Collapse className="justify-content-end">*/}
-				{/*	<Navbar.Text>*/}
-				{/*		Signed in as: <a href="#login">Mark Otto</a>*/}
-				{/*	</Navbar.Text>*/}
-				{/*</Navbar.Collapse>*/}
+				
 			</Container>
 		</Navbar>);
 }

@@ -1,9 +1,9 @@
 import { configs } from "./constants";
 import cookieHelper from "./cookieHelper";
 
-const tokenHelper = {
+const TokenHelper = {
 
-  checkIfLoggedIn() {
+ checkIfLoggedIn() {
     const TOKEN = cookieHelper.get(configs.KEY);
     return !!TOKEN;
   },
@@ -26,4 +26,4 @@ const tokenHelper = {
   }
 };
 
-export default tokenHelper;
+export default TokenHelper;

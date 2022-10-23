@@ -1,16 +1,14 @@
-import SideMenu from "../../../components/sideMenu/SideMenu";
-import Header from "../../../components/header/Header";
-import Footer from "../../../components/footer/Footer";
-
-const Body = () => {
+const Body = ({projects}) => {
+	console.log(projects)
 	return (
 		<div className="page">
-			<SideMenu active="home"/>
-			<Header/>
-			{/*{loadState ? <SphereLoader/> :*/}
-			{/*  <Body stats={analytics.stats} userStats={users.userStats} profile={users.userData} trips={services.trips}/>*/}
+			{
+				projects.map((data, index) => (
+				<div key={index}>
+					<h1>{data["name"]}</h1>
+				</div>
+				))
 			}
-			<Footer/>
 		</div>
 	);
 }

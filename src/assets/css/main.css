@@ -2905,7 +2905,7 @@ input[type="search"] {
 	overflow: hidden;
 	right: 0;
 	top: 50%;
-	background: transparent url(../images/magnifier.svg) no-repeat center center;
+	background: transparent url(../../assets/images/loader.svg) no-repeat center center;
 	background-size: 100%;
 	border: none;
 	pointer-events: none;
@@ -25741,12 +25741,12 @@ fieldset[disabled] .form-control {
 }
  
 .profile-page .p-l-0.p-r-0 {
-	padding-right: 0px !important;
-	padding-left: 0px !important
+	padding-right: 0 !important;
+	padding-left: 0 !important
 }
 
 .profile-page .profile-header {
-	background: transparent url("../images/profile-bg.jpg") repeat scroll center center/cover;
+	background: transparent url("../../assets/images/loader.svg") repeat scroll center center/cover;
 	color: #fff;
 	padding-bottom: 30px;
 	padding-top: 30px;
@@ -26788,9 +26788,9 @@ code {
 .panel-tabs.main-nav-line {
 	margin-bottom: 10px;
 } 
-.sidebar {
-    padding-bottom: 50px;
-}
+/*.sidebar {*/
+/*    padding-bottom: 50px;*/
+/*}*/
 
 .content-height {
     min-height: calc(100vh - 127px);

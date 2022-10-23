@@ -1,34 +1,33 @@
-const SideMenu = () => {
+import {NavLink} from "react-router-dom";
+import {menuType} from "../../utils/helpers/constants"
+
+const SideMenu = ({active}) => {
+	console.log(active)
 	return (
 		<div>
-			<div className="overlay"></div>
-			
+			{/*<div className="overlay"/>*/}
 			<div id="leftsidebar" className="sidebar">
-				<div className="menu main-sidebar">
-					<ul className="list" id="documenter_nav">
-						<li className="nav-item">
-							<a className="nav-link" href="javascript:void(0)"><i className="fe fe-briefcase sidemenu-icon"/><span
-								className="sidemenu-label">Apps</span></a>
+				<div className="menu main-sidebar mt-1">
+					<ul className="list mt-5 pt-5" id="documenter_nav">
+						<li className={`nav-item ${active === menuType.HOME ? "active" : ""}`}>
+							<NavLink className="nav-link" to="/">
+								<i className="fe fe-briefcase sidemenu-icon"/><span className="sidemenu-label">Dashboard</span>
+							</NavLink>
 						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="javascript:void(0)"><i className="fe fe-aperture sidemenu-icon"/><span
-								className="sidemenu-label">UI</span></a>
+						<li className={`nav-item ${active === menuType.PROJECTS ? "active" : ""}`}>
+							<NavLink className="nav-link" to="/projects">
+								<i className="fe fe-aperture sidemenu-icon"/><span className="sidemenu-label">Projects</span>
+							</NavLink>
 						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="javascript:void(0)"><i className="fe fe-file-text sidemenu-icon"/><span
-								className="sidemenu-label">Form-elements</span></a>
+						<li className={`nav-item ${active === menuType.TASKS ? "active" : ""}`}>
+							<NavLink className="nav-link" to="/tasks">
+								<i className="fe fe-link sidemenu-icon"/><span className="sidemenu-label">Tasks</span>
+							</NavLink>
 						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="javascript:void(0)"><i className="fe fe-cpu sidemenu-icon"/><span
-								className="sidemenu-label">Form-advanced</span></a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="javascript:void(0)"><i className="fe fe-lock sidemenu-icon"/><span
-								className="sidemenu-label">Form-validation</span></a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="javascript:void(0)"><i className="fe fe-hard-drive sidemenu-icon"/><span
-								className="sidemenu-label">Form-wizard</span></a>
+						<li className={`nav-item ${active === menuType.USERS ? "active" : ""}`}>
+							<NavLink className="nav-link" to="/users">
+								<i className="fe fe-help-circle sidemenu-icon"/><span className="sidemenu-label">Users</span>
+							</NavLink>
 						</li>
 					</ul>
 				</div>
