@@ -1,6 +1,6 @@
-import SideMenu from "../../components/sideMenu/SideMenu";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+import SideMenu from "../../../components/sideMenu/SideMenu";
+import Header from "../../../components/header/Header";
+import Footer from "../../../components/footer/Footer";
 
 const Body = () => {
 	return (
